@@ -1,0 +1,14 @@
+{{note.headline}}
+<p><img src={{note.image}} alt={{note.headline}}></p>
+by {{note.author}} - {{note.date}}
+{{note.content}}
+
+<br>
+
+<h4>Comments on the article</h4>
+
+<ul>
+  {{#each note.comments as |comment|}}
+    {{comment-tile comment=comment}}
+  {{/each}}
+</ul>
